@@ -1,7 +1,7 @@
 // In unlock order (except for the meta)
 const huntData = {
   "Yaw": { "normalized": "TVlTUUxCVUc=", "display": "TVlTUUxCVUc=" },
-  "Pitch": { "normalized": "REpGUkFOS0U=", "display": "REpGUkFOS0U=" },
+  "Pitch": { "normalized": "REpGUkFOS0U=", "display": "REogRlJBTksgRQ==" },
   "Roll": { "normalized": "V0lUQ0hWT1g=", "display": "V0lUQ0hWT1g=" },
 }
 
