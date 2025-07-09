@@ -3,6 +3,7 @@ const huntData = {
   "Yaw": { "normalized": "TVlTUUxCVUc=", "display": "TVlTUUwgQlVH" },
   "Pitch": { "normalized": "REpGUkFOS0U=", "display": "REogRlJBTksgRQ==" },
   "Roll": { "normalized": "V0lUQ0hWT1g=", "display": "V0lUQ0hWT1g=" },
+  "LTP": { "normalized": "VEhSRUVERUNSRUVTT0ZGUkVFRE9N", "display": "VEhSRUUgREVDUkVFUyBPRiBGUkVFRE9N" },
 }
 
 const DEFAULT_WIDTH = 3;

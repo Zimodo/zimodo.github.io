@@ -12,6 +12,11 @@
 
 
 /* BEGIN from gph-site */
+
+h1, h2, .flavor, .clues, .rules, p, table, td, th {
+	font-family: "Georgia", "Times New Roman", Times, serif;
+	}
+
 span.spoiler {
   color: green;
 }
@@ -53,6 +58,7 @@ h1 {
 
 p {
   margin: 2;
+  text-align: center;
 }
 
 .bigpic {
@@ -100,6 +106,9 @@ table.solTable {
 
 table, td, th {
   border: 1px solid black;
+  border-spacing: 0px;
+  text-align:center;
+  vertical-align:middle;
 }
 
 div.hedgeholder {
