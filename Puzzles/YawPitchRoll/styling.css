@@ -13,7 +13,7 @@
 
 /* BEGIN from gph-site */
 
-h1, h2, .flavor, .clues, .rules, p, table, td, th {
+h1, h2, .flavor, .clues, .rules, p, a, table, td, th {
 	font-family: "Georgia", "Times New Roman", Times, serif;
 	}
 
@@ -115,4 +115,9 @@ div.hedgeholder {
   background-image: url("./images/map/Cockpit.png");
   height: 900px;
   width: 1600px;
+}
+
+video {
+  margin: auto;
+  display: block;
 }
