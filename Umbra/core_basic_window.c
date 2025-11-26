@@ -1,71 +1,41 @@
-/*******************************************************************************************
-*
-*   raylib [core] example - Basic window
-*
-*   Welcome to raylib!
-*
-*   To test examples, just press F6 and execute 'raylib_compile_execute' script
-*   Note that compiled executable is placed in the same folder as .c file
-*
-*   To test the examples on Web, press F6 and execute 'raylib_compile_execute_web' script
-*   Web version of the program is generated in the same folder as .c file
-*
-*   You can find all basic examples on C:\raylib\raylib\examples folder or
-*   raylib official webpage: www.raylib.com
-*
-*   Enjoy using raylib. :)
-*
-*   Example originally created with raylib 1.0, last time updated with raylib 1.0
-*
-*   Example licensed under an unmodified zlib/libpng license, which is an OSI-certified,
-*   BSD-like license that allows static linking with closed source software
-*
-*   Copyright (c) 2013-2024 Ramon Santamaria (@raysan5)
-*
-********************************************************************************************/
-
 #include "raylib.h"
 
-//------------------------------------------------------------------------------------
-// Program main entry point
-//------------------------------------------------------------------------------------
 int main(void)
 {
-    // Initialization
-    //--------------------------------------------------------------------------------------
     const int screenWidth = 800;
     const int screenHeight = 800;
 
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+    InitWindow(screenWidth, screenHeight, "UMBRA");
 
-    SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
-    //--------------------------------------------------------------------------------------
-
+    Vector2 earthPosition = { (float)screenWidth/2, (float)screenHeight/2 };
+    
+    SetTargetFPS(60);
+    
     // Main game loop
     while (!WindowShouldClose())    // Detect window close button or ESC key
     {
-        // Update
-        //----------------------------------------------------------------------------------
-        // TODO: Update your variables here
-        //----------------------------------------------------------------------------------
-
-        // Draw
-        //----------------------------------------------------------------------------------
+        if (IsKeyDown(KEY_RIGHT))   earthPosition.x += 2.0f;
+        if (IsKeyDown(KEY_LEFT))    earthPosition.x -= 2.0f;
+        if (IsKeyDown(KEY_UP))      earthPosition.y -= 2.0f;
+        if (IsKeyDown(KEY_DOWN))    earthPosition.y += 2.0f;
+        
         BeginDrawing();
 
             ClearBackground(BLACK);
 
-            DrawText("Congrats! You created your first window!", screenWidth/2, screenHeight/2, 20, WHITE);
-            DrawTextEx(Arial,"Congrats!",1,1,20,1,WHITE)
+            DrawText("move the ball with arrow keys", 10, 10, 20, DARKGRAY);
 
+            // Draw Earth
+            DrawCircleV(earthPosition, 50, BLUE);
+            
+            // Draw Moon
+            
+            DrawCircleV(earthPosition, 20, GRAY);
+            
         EndDrawing();
-        //----------------------------------------------------------------------------------
     }
 
-    // De-Initialization
-    //--------------------------------------------------------------------------------------
-    CloseWindow();        // Close window and OpenGL context
-    //--------------------------------------------------------------------------------------
+    CloseWindow();
 
     return 0;
 }
