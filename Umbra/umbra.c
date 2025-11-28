@@ -36,14 +36,8 @@ int main()
             if (leftStickX > -leftStickDeadzoneX && leftStickX < leftStickDeadzoneX) leftStickX = 0.0f;
             if (leftStickY > -leftStickDeadzoneY && leftStickY < leftStickDeadzoneY) leftStickY = 0.0f; 
 
-            earthPosition.x += leftStickX*3;
-            earthPosition.y += leftStickY*3;
-
-
-            if (IsKeyDown(KEY_D)) earthPosition.x += 2.0f;
-            if (IsKeyDown(KEY_A)) earthPosition.x -= 2.0f;
-            if (IsKeyDown(KEY_W)) earthPosition.y -= 2.0f;
-            if (IsKeyDown(KEY_S)) earthPosition.y += 2.0f;
+            earthPosition.x += leftStickX*200*GetFrameTime();
+            earthPosition.y += leftStickY*200*GetFrameTime();
 
             // Moon
             
